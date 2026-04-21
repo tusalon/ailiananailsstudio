@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Hany Dorta Nails Designer
+// sw.js - Service Worker para Ailiana nails studio
 
-const CACHE_NAME = 'hanydorta-nails-v1';
+const CACHE_NAME = 'ailiananailsstudio-v1';
 const urlsToCache = [
-  '/hanydorta-nailsdesigner/',
-  '/hanydorta-nailsdesigner/index.html',
-  '/hanydorta-nailsdesigner/admin.html',
-  '/hanydorta-nailsdesigner/admin-login.html',
-  '/hanydorta-nailsdesigner/setup-wizard.html',
-  '/hanydorta-nailsdesigner/editar-negocio.html',
-  '/hanydorta-nailsdesigner/manifest.json',
-  '/hanydorta-nailsdesigner/icons/icon-72x72.png',
-  '/hanydorta-nailsdesigner/icons/icon-96x96.png',
-  '/hanydorta-nailsdesigner/icons/icon-128x128.png',
-  '/hanydorta-nailsdesigner/icons/icon-144x144.png',
-  '/hanydorta-nailsdesigner/icons/icon-152x152.png',
-  '/hanydorta-nailsdesigner/icons/icon-192x192.png',
-  '/hanydorta-nailsdesigner/icons/icon-384x384.png',
-  '/hanydorta-nailsdesigner/icons/icon-512x512.png'
+  '/ailiananailsstudio/',
+  '/ailiananailsstudio/index.html',
+  '/ailiananailsstudio/admin.html',
+  '/ailiananailsstudio/admin-login.html',
+  '/ailiananailsstudio/setup-wizard.html',
+  '/ailiananailsstudio/editar-negocio.html',
+  '/ailiananailsstudio/manifest.json',
+  '/ailiananailsstudio/icons/icon-72x72.png',
+  '/ailiananailsstudio/icons/icon-96x96.png',
+  '/ailiananailsstudio/icons/icon-128x128.png',
+  '/ailiananailsstudio/icons/icon-144x144.png',
+  '/ailiananailsstudio/icons/icon-152x152.png',
+  '/ailiananailsstudio/icons/icon-192x192.png',
+  '/ailiananailsstudio/icons/icon-384x384.png',
+  '/ailiananailsstudio/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/hanydorta-nailsdesigner/icons/icon-192x192.png');
+            return caches.match('/ailiananailsstudio/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Hany Dorta Nails Designer');
+console.log('✅ Service Worker configurado para Ailiana nails studio');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
