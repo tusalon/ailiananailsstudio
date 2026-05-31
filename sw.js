@@ -1,6 +1,6 @@
 // sw.js - Service Worker para Ailiana nails studio
 
-const CACHE_NAME = 'ailiananailsstudio-v29';
+const CACHE_NAME = 'ailiananailsstudio-v47';
 const urlsToCache = [
   '/ailiananailsstudio/',
   '/ailiananailsstudio/index.html',
@@ -17,7 +17,14 @@ const urlsToCache = [
   '/ailiananailsstudio/icons/icon-152x152.png',
   '/ailiananailsstudio/icons/icon-192x192.png',
   '/ailiananailsstudio/icons/icon-384x384.png',
-  '/ailiananailsstudio/icons/icon-512x512.png'
+  '/ailiananailsstudio/icons/icon-512x512.png',
+  '/ailiananailsstudio/vendor/react.production.min.js',
+  '/ailiananailsstudio/vendor/react-dom.production.min.js',
+  '/ailiananailsstudio/vendor/babel.min.js',
+  '/ailiananailsstudio/vendor/bcrypt.min.js',
+  '/ailiananailsstudio/vendor/tailwind-browser.js',
+  '/ailiananailsstudio/vendor/lucide/lucide.css',
+  '/ailiananailsstudio/vendor/lucide/lucide.woff2'
 ];
 
 // ============================================
