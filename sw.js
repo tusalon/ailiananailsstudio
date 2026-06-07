@@ -1,6 +1,6 @@
 // sw.js - Service Worker para Ailiana nails studio
 
-const CACHE_NAME = 'ailiananailsstudio-v49';
+const CACHE_NAME = 'ailiananailsstudio-v51';
 const urlsToCache = [
   '/ailiananailsstudio/',
   '/ailiananailsstudio/index.html',
